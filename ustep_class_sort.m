@@ -1,5 +1,5 @@
 % delete repeats
-
+clc
 clear
 
 % read from csv of classes in google sheet from form
@@ -60,7 +60,7 @@ kid = [firstname,lastname, c1c1, c1c2, c1c3, c1c4, c1c5, c2c1, c2c2, c2c3, c2c4,
 
 kid = table2array(kid);
 siz = size(kid);
-
+class_size = 2;
 % Block 1 loop
 
 block1class1 = [];
@@ -72,35 +72,53 @@ block1class5 = [];
 
 %  Block 1
 for i = 1:siz(1,:)
+    pick1 = kid(i,3);
+    pick2 = kid(i, 4);
+    pick3 = kid(i, 5);
+    pick4 = kid(i, 6);
+    pick5 = kid(i, 7);
     
-    check_b1c1 = strcmp(kid(i,3), 'a');
-    check_b1c2 = strcmp(kid(i,3), 'b');
-    check_b1c3 = strcmp(kid(i,3), 'c');
-    check_b1c4 = strcmp(kid(i,3), 'd');
-    check_b1c5 = strcmp(kid(i,3), 'e');
+    check_b1c1 = strcmp(pick1, 'a');
+    check_b1c2 = strcmp(pick1, 'b');
+    check_b1c3 = strcmp(pick1, 'c');
+    check_b1c4 = strcmp(pick1, 'd');
+    check_b1c5 = strcmp(pick1, 'e');
     
+    block1_classes = ['a', 'b', 'c', 'd', 'e'];
+    [rows, cols] = size(block1class1)
+    xcheck = length(block1class1)
     if check_b1c1 == 1
-        if length(block1class1) <= 3
+        if size(block1class2,1) < class_size
             block1class1 = [block1class1; kid(i,1) kid(i,2)];
-        else
+            
+        elseif (pick2 == "b" && size(block1class2,1) <= class_size)
+            block1class2 = [block1class2; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == "c" && size(block1class3,1) < class_size
+            block1class3 = [block1class3; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == "d" && size(block1class4,1) < class_size
+            block1class4 = [block1class4; kid(i,1) kid(i,2)];
+        elseif pick2 == "e" && size(block1class5,1) < class_size
+            block1class5 = [block1class5; kid(i,1) kid(i,2)];
         end
     elseif check_b1c2 == 1
-        if length(block1class2) <= 3
+        if size(block1class2,1) < class_size
             block1class2 = [block1class2; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b1c3 == 1
-        if length(block1class3) <= 3
+        if size(block1class3,1) < class_size
             block1class3 = [block1class3; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b1c4 == 1
-        if length(block1class4) <= 3
+        if size(block1class4,1) < class_size
             block1class4 = [block1class4; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b1c5 == 1
-        if length(block1class5) <= 3
+        if size(block1class5,1) < class_size
             block1class5 = [block1class5; kid(i,1) kid(i,2)];
         else
         end
@@ -124,27 +142,27 @@ for i = 1:siz(1,:)
     check_b2c5 = strcmp(kid(i,9), 'ee');
     
     if check_b2c1 == 1
-        if length(block2class1) <= 3
+        if length(block2class1) < class_size
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b2c2 == 1
-        if length(block2class2) <= 3
+        if length(block2class2) < class_size
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b2c3 == 1
-        if length(block2class3) <= 3
+        if length(block2class3) < class_size
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b2c4 == 1
-        if length(block2class4) <= 3
+        if length(block2class4) < class_size
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
         else
         end
     elseif check_b2c5 == 1
-        if length(block2class5) <= 3
+        if length(block2class5) < class_size
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
         else
         end
