@@ -34,7 +34,7 @@ lastname = form(:,'LastName');
 
 % c1c1 = class 1 choice 1 etc adjust for # of classes
 
-c1c1 = form(:, 'Class1_RankTheClassesInOrderOfPreference_1stChoice_');
+c1c1 = table2array(form(:, 'Class1_RankTheClassesInOrderOfPreference_1stChoice_'));
 c1c2 = form(:, 'Class1_RankTheClassesInOrderOfPreference_2ndChoice_');
 c1c3 = form(:, 'Class1_RankTheClassesInOrderOfPreference_3rdChoice_');
 c1c4 = form(:, 'Class1_RankTheClassesInOrderOfPreference_4thChoice_');
@@ -59,6 +59,112 @@ c4c4 = form(:, 'Class4_RankTheClassesInOrderOfPreference_4thChoice_');
 kid = [firstname,lastname, c1c1, c1c2, c1c3, c1c4, c1c5, c2c1, c2c2, c2c3, c2c4, c2c5, c3c1, c3c2, c3c3, c3c4, c4c1, c4c2, c4c3, c4c4];
 
 kid = table2array(kid);
+siz = size(kid);
+
+% Block 1 loop
+
+block1class1 = [];
+block1class2 = [];
+block1class3 = [];
+block1class4 = [];
+block1class5 = [];
+
+
+%  Block 1
+for i = 1:siz(1,:)
+    
+    check_b1c1 = strcmp(kid(i,3), 'a');
+    check_b1c2 = strcmp(kid(i,3), 'b');
+    check_b1c3 = strcmp(kid(i,3), 'c');
+    check_b1c4 = strcmp(kid(i,3), 'd');
+    check_b1c5 = strcmp(kid(i,3), 'e');
+    
+    if check_b1c1 == 1
+        if length(block1class1) <= 3
+            block1class1 = [block1class1; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b1c2 == 1
+        if length(block1class2) <= 3
+            block1class2 = [block1class2; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b1c3 == 1
+        if length(block1class3) <= 3
+            block1class3 = [block1class3; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b1c4 == 1
+        if length(block1class4) <= 3
+            block1class4 = [block1class4; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b1c5 == 1
+        if length(block1class5) <= 3
+            block1class5 = [block1class5; kid(i,1) kid(i,2)];
+        else
+        end
+    end
+end
+
+block2class1 = [];
+block2class2 = [];
+block2class3 = [];
+block2class4 = [];
+block2class5 = [];
+
+% Block 2
+
+for i = 1:siz(1,:)
+    
+    check_b2c1 = strcmp(kid(i,9), 'aa');
+    check_b2c2 = strcmp(kid(i,9), 'bb');
+    check_b2c3 = strcmp(kid(i,9), 'cc');
+    check_b2c4 = strcmp(kid(i,9), 'dd');
+    check_b2c5 = strcmp(kid(i,9), 'ee');
+    
+    if check_b2c1 == 1
+        if length(block2class1) <= 3
+            block2class1 = [block2class1; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b2c2 == 1
+        if length(block2class2) <= 3
+            block2class2 = [block2class2; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b2c3 == 1
+        if length(block2class3) <= 3
+            block2class3 = [block2class3; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b2c4 == 1
+        if length(block2class4) <= 3
+            block2class4 = [block2class4; kid(i,1) kid(i,2)];
+        else
+        end
+    elseif check_b2c5 == 1
+        if length(block2class5) <= 3
+            block2class5 = [block2class5; kid(i,1) kid(i,2)];
+        else
+        end
+    end
+end
+
+block3class1 = [];
+block3class2 = [];
+block3class3 = [];
+block3class4 = [];
+
+% Block 3
+
+block4class1 = [];
+block4class2 = [];
+block4class3 = [];
+block4class4 = [];
+
+% Block 4
+
 
 % Try next time:
 % convert to array instead table 
