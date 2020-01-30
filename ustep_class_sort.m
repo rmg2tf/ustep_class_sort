@@ -70,7 +70,8 @@ block1class4 = [];
 block1class5 = [];
 
 block1_classes = ["a", "b", "c", "d", "e"];
-%  Block 1
+
+%  Block 1 -------------------------------------------
 for i = 1:siz(1,:)
     pick1 = kid(i,3);
     pick2 = kid(i, 4);
@@ -86,22 +87,22 @@ for i = 1:siz(1,:)
     
     
 
-    if check_b1c1 == 1
+    if check_b1c1 == 1 % if first class is class 1
         if size(block1class1,1) < class_size
             block1class1 = [block1class1; kid(i,1) kid(i,2)];
-        elseif (pick2 == block1_classes(2) && size(block1class2,1) < class_size)
+        elseif (pick2 == block1_classes(2) && size(block1class2,1) < class_size) % try class 2
             block1class2 = [block1class2; kid(i,1) kid(i,2)];
             
-        elseif pick2 == block1_classes(3) && size(block1class3,1) < class_size
+        elseif pick2 == block1_classes(3) && size(block1class3,1) < class_size % try class 3
             block1class3 = [block1class3; kid(i,1) kid(i,2)];
             
-        elseif pick2 == block1_classes(4) && size(block1class4,1) < class_size
+        elseif pick2 == block1_classes(4) && size(block1class4,1) < class_size % try class 4
             block1class4 = [block1class4; kid(i,1) kid(i,2)];
-        elseif pick2 == block1_classes(5) && size(block1class5,1) < class_size
+        elseif pick2 == block1_classes(5) && size(block1class5,1) < class_size % try class 5
             block1class5 = [block1class5; kid(i,1) kid(i,2)];
         end
         
-    elseif check_b1c2 == 1
+    elseif check_b1c2 == 1 % if first class is class 2
         if size(block1class2,1) < class_size
             block1class2 = [block1class2; kid(i,1) kid(i,2)];
         elseif (pick2 == block1_classes(1) && size(block1class1,1) < class_size)
@@ -116,7 +117,7 @@ for i = 1:siz(1,:)
             block1class5 = [block1class5; kid(i,1) kid(i,2)];
         end
         
-    elseif check_b1c3 == 1
+    elseif check_b1c3 == 1 % if first class is class 3
         if size(block1class3,1) < class_size
             block1class3 = [block1class3; kid(i,1) kid(i,2)];
         elseif (pick2 == block1_classes(2) && size(block1class2,1) < class_size)
@@ -131,7 +132,7 @@ for i = 1:siz(1,:)
             block1class5 = [block1class5; kid(i,1) kid(i,2)];
         end
         
-    elseif check_b1c4 == 1
+    elseif check_b1c4 == 1 % if first class is class 4
         if size(block1class4,1) < class_size
             block1class4 = [block1class4; kid(i,1) kid(i,2)];
         elseif (pick2 == block1_classes(2) && size(block1class2,1) < class_size)
@@ -146,7 +147,7 @@ for i = 1:siz(1,:)
             block1class5 = [block1class5; kid(i,1) kid(i,2)];
         end
         
-    elseif check_b1c5 == 1
+    elseif check_b1c5 == 1 % if first class is class 5
         if size(block1class5,1) < class_size
             block1class5 = [block1class5; kid(i,1) kid(i,2)];
         elseif (pick2 == block1_classes(2) && size(block1class2,1) < class_size)
@@ -169,7 +170,7 @@ block2class3 = [];
 block2class4 = [];
 block2class5 = [];
 
-% Block 2
+% Block 2 ------------------------------------------------
 
 for i = 1:siz(1,:)
     
