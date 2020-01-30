@@ -205,72 +205,87 @@ for i = 1:siz(1,:)
     if check_b2c1 == 1
         if size(block2class1,1) < class_size
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(1);
         elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(2);
         elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(3);
         elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(4);
         elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(5);
         end
     elseif check_b2c2 == 1
         if size(block2class2,1) < class_size
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(2);
         elseif (pick2 == block2_classes(1) && size(block2class1,1) < class_size) % try class 2
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(1);
         elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(3);
         elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(4);
         elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(5);
         end
     elseif check_b2c3 == 1
         if size(block2class3,1) < class_size
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(3);
         elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(2);
         elseif pick2 == block2_classes(1) && size(block2class1,1) < class_size % try class 3
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(1);
         elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(4);
         elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(5);
         end
     elseif check_b2c4 == 1
         if size(block2class4,1) < class_size
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(4);
         elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(2);
         elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(3);
         elseif pick2 == block2_classes(1) && size(block2class1,1) < class_size % try class 4
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(1);
         elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(5);
         end
     elseif check_b2c5 == 1
         if size(block2class5,1) < class_size
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(5);
         elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(2);
         elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
-            
+            kid_schedule{i,4} = block2_classes(3);
         elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(4);
         elseif pick2 == block2_classes(1) && size(block2class1,1) < class_size % try class 5
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,4} = block2_classes(1);
         end
     end
 end
@@ -280,8 +295,81 @@ block3class2 = [];
 block3class3 = [];
 block3class4 = [];
 
+block3_classes = ["aaa", "bbb", "ccc", "ddd"];
 % Block 3
-
+for i = 1:siz(1,:)
+    pick1 = kid(i,13);
+    pick2 = kid(i, 14);
+    pick3 = kid(i, 15);
+    pick4 = kid(i, 16);
+    
+    check_b3c1 = strcmp(pick1, block3_classes(1));
+    check_b3c2 = strcmp(pick2, block3_classes(2));
+    check_b3c3 = strcmp(pick3, block3_classes(3));
+    check_b3c4 = strcmp(pick4, block3_classes(4));
+    
+    
+    if check_b3c1 == 1
+        if size(block3class1,1) < class_size
+            block3class1 = [block3class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(1);
+        elseif (pick2 == block3_classes(2) && size(block3class2,1) < class_size) % try class 2
+            block3class2 = [block3class2; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(2);
+        elseif pick2 == block3_classes(3) && size(block3class3,1) < class_size % try class 3
+            block3class3 = [block3class3; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(3);
+        elseif pick2 == block3_classes(4) && size(block3class4,1) < class_size % try class 4
+            block3class4 = [block3class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(4);
+        end
+    elseif check_b3c2 == 1
+        if size(block3class2,1) < class_size
+            block3class2 = [block3class2; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(2);
+        elseif (pick2 == block3_classes(1) && size(block3class1,1) < class_size) % try class 2
+            block3class1 = [block3class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(1);
+        elseif pick2 == block3_classes(3) && size(block3class3,1) < class_size % try class 3
+            block3class3 = [block3class3; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(3);
+        elseif pick2 == block3_classes(4) && size(block3class4,1) < class_size % try class 4
+            block3class4 = [block3class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(4);
+        end
+    elseif check_b3c3 == 1
+        if size(block3class3,1) < class_size
+            block3class3 = [block3class3; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(3);
+        elseif (pick2 == block3_classes(2) && size(block3class2,1) < class_size) % try class 2
+            block3class2 = [block3class2; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(2);
+        elseif pick2 == block3_classes(1) && size(block3class1,1) < class_size % try class 3
+            block3class1 = [block3class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(1);
+        elseif pick2 == block3_classes(4) && size(block3class4,1) < class_size % try class 4
+            block3class4 = [block3class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(4);
+        end
+    elseif check_b3c4 == 1
+        if size(block3class4,1) < class_size
+            block3class4 = [block3class4; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(4);
+        elseif (pick2 == block3_classes(2) && size(block3class2,1) < class_size) % try class 2
+            block3class2 = [block3class2; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(2);
+        elseif pick2 == block3_classes(3) && size(block3class3,1) < class_size % try class 3
+            block3class3 = [block3class3; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(3);
+        elseif pick2 == block3_classes(1) && size(block3class1,1) < class_size % try class 4
+            block3class1 = [block3class1; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(1);
+        elseif pick2 == block3_classes(5) && size(block3class5,1) < class_size % try class 5
+            block3class5 = [block3class5; kid(i,1) kid(i,2)];
+            kid_schedule{i,5} = block3_classes(5);
+        end
+    end
+end
 block4class1 = [];
 block4class2 = [];
 block4class3 = [];
@@ -297,5 +385,6 @@ block4class4 = [];
 % UPDATE: (can always convert back)
 
 % try and set up loop for class block 1
+
 
 
