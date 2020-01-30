@@ -170,40 +170,91 @@ block2class3 = [];
 block2class4 = [];
 block2class5 = [];
 
+block2_classes = ["aa", "bb", "cc", "dd", "ee"];
+
 % Block 2 ------------------------------------------------
 
 for i = 1:siz(1,:)
-    
-    check_b2c1 = strcmp(kid(i,9), 'aa');
-    check_b2c2 = strcmp(kid(i,9), 'bb');
-    check_b2c3 = strcmp(kid(i,9), 'cc');
-    check_b2c4 = strcmp(kid(i,9), 'dd');
-    check_b2c5 = strcmp(kid(i,9), 'ee');
+    pick1 = kid(i,8);
+    pick2 = kid(i, 9);
+    pick3 = kid(i, 10);
+    pick4 = kid(i, 11);
+    pick5 = kid(i, 12);
+    check_b2c1 = strcmp(kid(i,9), block2_classes(1));
+    check_b2c2 = strcmp(kid(i,9), block2_classes(2));
+    check_b2c3 = strcmp(kid(i,9), block2_classes(3));
+    check_b2c4 = strcmp(kid(i,9), block2_classes(4));
+    check_b2c5 = strcmp(kid(i,9), block2_classes(5));
     
     if check_b2c1 == 1
-        if length(block2class1) < class_size
+        if size(block2class1,1) < class_size
             block2class1 = [block2class1; kid(i,1) kid(i,2)];
-        else
+        elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
+            block2class2 = [block2class2; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
+            block2class3 = [block2class3; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
+            block2class4 = [block2class4; kid(i,1) kid(i,2)];
+        elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
+            block2class5 = [block2class5; kid(i,1) kid(i,2)];
         end
     elseif check_b2c2 == 1
-        if length(block2class2) < class_size
+        if size(block2class2,1) < class_size
             block2class2 = [block2class2; kid(i,1) kid(i,2)];
-        else
+        elseif (pick2 == block2_classes(1) && size(block2class1,1) < class_size) % try class 2
+            block2class1 = [block2class1; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
+            block2class3 = [block2class3; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
+            block2class4 = [block2class4; kid(i,1) kid(i,2)];
+        elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
+            block2class5 = [block2class5; kid(i,1) kid(i,2)];
         end
     elseif check_b2c3 == 1
-        if length(block2class3) < class_size
+        if size(block2class3,1) < class_size
             block2class3 = [block2class3; kid(i,1) kid(i,2)];
-        else
+        elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
+            block2class2 = [block2class2; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(1) && size(block2class1,1) < class_size % try class 3
+            block2class1 = [block2class1; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
+            block2class4 = [block2class4; kid(i,1) kid(i,2)];
+        elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
+            block2class5 = [block2class5; kid(i,1) kid(i,2)];
         end
     elseif check_b2c4 == 1
-        if length(block2class4) < class_size
+        if size(block2class4,1) < class_size
             block2class4 = [block2class4; kid(i,1) kid(i,2)];
-        else
+        elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
+            block2class2 = [block2class2; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
+            block2class3 = [block2class3; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(1) && size(block2class1,1) < class_size % try class 4
+            block2class1 = [block2class1; kid(i,1) kid(i,2)];
+        elseif pick2 == block2_classes(5) && size(block2class5,1) < class_size % try class 5
+            block2class5 = [block2class5; kid(i,1) kid(i,2)];
         end
     elseif check_b2c5 == 1
-        if length(block2class5) < class_size
+        if size(block2class5,1) < class_size
             block2class5 = [block2class5; kid(i,1) kid(i,2)];
-        else
+        elseif (pick2 == block2_classes(2) && size(block2class2,1) < class_size) % try class 2
+            block2class2 = [block2class2; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(3) && size(block2class3,1) < class_size % try class 3
+            block2class3 = [block2class3; kid(i,1) kid(i,2)];
+            
+        elseif pick2 == block2_classes(4) && size(block2class4,1) < class_size % try class 4
+            block2class4 = [block2class4; kid(i,1) kid(i,2)];
+        elseif pick2 == block2_classes(1) && size(block2class1,1) < class_size % try class 5
+            block2class1 = [block2class1; kid(i,1) kid(i,2)];
         end
     end
 end
