@@ -61,8 +61,8 @@ kid_schedule = [firstname, lastname];
 kid = table2array(kid);
 kid_schedule = table2array(kid_schedule);
 siz = size(kid);
-class_size = 2;
-afternoon_class_size = 3;
+class_size = 3;
+afternoon_class_size = 7;
 % Block 1 loop
 
 block1class1 = [];
@@ -305,9 +305,9 @@ for i = 1:siz(1,:)
     pick4 = kid(i, 16);
     
     check_b3c1 = strcmp(pick1, block3_classes(1));
-    check_b3c2 = strcmp(pick2, block3_classes(2));
-    check_b3c3 = strcmp(pick3, block3_classes(3));
-    check_b3c4 = strcmp(pick4, block3_classes(4));
+    check_b3c2 = strcmp(pick1, block3_classes(2));
+    check_b3c3 = strcmp(pick1, block3_classes(3));
+    check_b3c4 = strcmp(pick1, block3_classes(4));
     
     
     if check_b3c1 == 1
@@ -374,6 +374,7 @@ block4class2 = [];
 block4class3 = [];
 block4class4 = [];
 block4_classes = ["aaaa", "bbbb", "cccc", "dddd"];
+
 % Block 4
 for i = 1:siz(1,:)
     pick1 = kid(i,17);
@@ -382,9 +383,9 @@ for i = 1:siz(1,:)
     pick4 = kid(i, 20);
     
     check_b4c1 = strcmp(pick1, block4_classes(1));
-    check_b4c2 = strcmp(pick2, block4_classes(2));
-    check_b4c3 = strcmp(pick3, block4_classes(3));
-    check_b4c4 = strcmp(pick4, block4_classes(4));
+    check_b4c2 = strcmp(pick1, block4_classes(2));
+    check_b4c3 = strcmp(pick1, block4_classes(3));
+    check_b4c4 = strcmp(pick1, block4_classes(4))
     
     
     if check_b4c1 == 1
@@ -430,6 +431,7 @@ for i = 1:siz(1,:)
             kid_schedule{i,6} = block4_classes(4);
         end
     elseif check_b4c4 == 1
+        x = 1
         if size(block4class4,1) < afternoon_class_size
             block4class4 = [block4class4; kid(i,1) kid(i,2)];
             kid_schedule{i,6} = block4_classes(4);
